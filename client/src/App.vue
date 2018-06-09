@@ -1,16 +1,23 @@
 <template>
   <div id="app">
-    <router-view/>
+    <v-app class="blue-grey lighten-5">
+      <page-header/>
+      <main>
+        <v-container fluid>
+           <router-view></router-view>
+        </v-container>
+      </main>
+    </v-app>
   </div>
 </template>
 
 <script>
 import Register from './components/Register'
-
+import PageHeader from './components/Header'
 export default {
   name: 'App',
   components: {
-    Register
+    Register, PageHeader
   }
 }
 </script>
@@ -29,7 +36,7 @@ export default {
    border-bottom: 1px solid silver;
  }
  .toolbar__title{
-  color:#fff 
+  color:#fff
  }
  .btn__content{
    color: #fff

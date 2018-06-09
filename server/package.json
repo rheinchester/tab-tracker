@@ -8,7 +8,7 @@
     "lint": "./node_modules/.bin/eslint **/*.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jacob Okoro <jaycobokoro@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",

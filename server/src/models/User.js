@@ -1,4 +1,4 @@
-//user sequelize models (read doc)
+//user sequelize model (read doc)
 module.exports = (sequelize, DataTypes) => 
     sequelize.define('User', {
         email:{
