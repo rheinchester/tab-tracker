@@ -15,8 +15,8 @@ app.use(cors())
 require('./routes')(app)
 
 /**
- * connects sequelize to whatever database you have it configured
- *  for. Then start server from a port defined in ./config/config.js
+ *  sequelize.sync() connects sequelize to whatever database you have it configured
+ *  for. Then starts server from a port defined in ./config/config.js
  */
 sequelize.sync()
   .then(()=>{

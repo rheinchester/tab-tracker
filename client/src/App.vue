@@ -15,10 +15,11 @@
 <script>
 import Register from './components/Register'
 import PageHeader from './components/Header'
+import Login from './components/Login'
 export default {
   name: 'App',
   components: {
-    Register, PageHeader
+    Register, PageHeader, Login
   }
 }
 </script>
