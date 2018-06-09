@@ -1,3 +1,4 @@
+<!--vuetify template-->
 <template>
   <div id="app">
     <v-app class="blue-grey lighten-5">
