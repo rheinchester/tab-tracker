@@ -1,4 +1,6 @@
 node_modules/
+src/config/config.js
+tabtracker.sqlite
 
 # Editor directories and files
 .idea
@@ -7,5 +9,3 @@ node_modules/
 *.ntvs*
 *.njsproj
 *.sln
-.tabtracker.sqlite
-node_modules/

@@ -10,7 +10,6 @@
    <!--If you want sign up to be the same as tab-tracker,
    implement navigateTo() from video
    or google a better solution-->
-
     <!--Implement later-->
     <v-toolbar-items>
       <v-btn flat dark>
@@ -24,13 +23,15 @@
         <!-- <router-link> loops through 'Router.routes' in index.js and looks for register-->
         <router-link class="a-text" to="register">
           <!-- Ensure that <v-btn> is always inside <router-link> -->
-          <v-btn flat dark>
+          <v-btn flat dark
+          v-if="!$store.state.isUserLoggedIn">
             Sign Up
           </v-btn>
         </router-link>
 
         <router-link class="a-text" to="login">
-          <v-btn flat dark>
+          <v-btn flat dark
+          v-if="!$store.state.isUserLoggedIn">
             Login
           </v-btn>
         </router-link>
