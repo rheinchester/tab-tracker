@@ -2,6 +2,7 @@
 <template>
   <v-layout column>
     <v-flex xs1>
+      <panel title="Register"></panel>
       <div class="white elevation-2 centered-form">
         <v-toolbar flat dense class="light-green accent-4">
           <v-toolbar-title>Register</v-toolbar-title>
@@ -35,6 +36,7 @@
 
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
+import Panel from '@/components/Panel'
 export default {
   data () {
     return {
@@ -56,7 +58,10 @@ export default {
         this.error = error.response.data.error
       }
     }
-  }
+  },
+  components:{
+      Panel
+    }
 }
 </script>
 

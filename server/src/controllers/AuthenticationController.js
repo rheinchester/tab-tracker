@@ -35,7 +35,7 @@ module.exports = {
                 })
             }
 
-            const isPassWordValid = await user.comparePassword(password)// wait until promise resolves
+            const isPassWordValid =  user.comparePassword(password)// wait until promise resolves
             if (!isPassWordValid) {
                 console.log(user.password,'++++', password)
                 return res.status(403).send({
@@ -53,7 +53,7 @@ module.exports = {
             res.status(500).send({
                 error: 'An error has occured trying to login'
             })
-            //email already exists 
+            //email already exists
         }
     }
 }

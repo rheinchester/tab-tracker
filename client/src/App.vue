@@ -16,10 +16,11 @@
 import Register from './components/Register'
 import PageHeader from './components/Header'
 import Login from './components/Login'
+import Songs from './components/Songs'
 export default {
   name: 'App',
   components: {
-    Register, PageHeader, Login
+    Register, PageHeader, Login, Songs
   }
 }
 </script>

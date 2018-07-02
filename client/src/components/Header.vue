@@ -12,9 +12,11 @@
    or google a better solution-->
     <!--Implement later-->
     <v-toolbar-items>
-      <v-btn flat dark>
-        Browse
-      </v-btn>
+      <router-link class="a-text" to="songs">
+        <v-btn flat dark>
+          Browse
+        </v-btn>
+      </router-link>
     </v-toolbar-items>
 
     <v-spacer></v-spacer>
@@ -31,8 +33,16 @@
 
         <router-link class="a-text" to="login">
           <v-btn flat dark
-          v-if="!$store.state.isUserLoggedIn">
+            v-if="!$store.state.isUserLoggedIn">
             Login
+          </v-btn>
+        </router-link>
+
+        <router-link class="a-text" to="/">
+          <!-- Ensure that <v-btn> is always inside <router-link> -->
+          <v-btn flat dark
+            v-if="  $store.state.isUserLoggedIn">
+            Log out
           </v-btn>
         </router-link>
     </v-toolbar-items>
@@ -41,6 +51,10 @@
 
 <script>
 export default {
+  logout () {
+    this.$store.dispatch('setToken', null)
+    this.$store.dispatch('setUser', null)
+  }
 }
 </script>
 
