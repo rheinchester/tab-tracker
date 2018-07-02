@@ -5,6 +5,7 @@
  */
 const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
 const AuthenticationController = require('./controllers/AuthenticationController')
+const SongsController = require('./controllers/SongsController')
 module.exports = (app) => {
     app.get('/', (req, res)=>{
         res.send('Hello world')
@@ -16,6 +17,14 @@ module.exports = (app) => {
     )
     app.post('/login', 
     AuthenticationController.login
+    )
+
+    app.get('/songs', 
+    SongsController.index
+    )
+
+    app.post('/songs', 
+    SongsController.post
     )
 }
  

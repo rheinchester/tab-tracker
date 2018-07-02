@@ -2,12 +2,7 @@
 <template>
   <v-layout column>
     <v-flex xs1>
-      <panel title="Register"></panel>
-      <div class="white elevation-2 centered-form">
-        <v-toolbar flat dense class="light-green accent-4">
-          <v-toolbar-title>Register</v-toolbar-title>
-        </v-toolbar>
-        <div class="pl-4 pr-4 pt-2 pb-2">
+      <panel title="Register">
           <form name="tab-tracker-form" autocomplete="off">
             <v-text-field label="Email" v-model="email"
             ></v-text-field>
@@ -28,8 +23,7 @@
               Register
             </v-btn>
           </form>
-        </div>
-      </div>
+      </panel>
     </v-flex>
   </v-layout>
 </template>
@@ -59,9 +53,9 @@ export default {
       }
     }
   },
-  components:{
-      Panel
-    }
+  components: {
+    Panel
+  }
 }
 </script>
 

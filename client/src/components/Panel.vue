@@ -9,7 +9,7 @@
 
         <div class="pl-4 pr-4 pt-2 pb-2">
             <slot>
-              NO slot content defined
+              No slot content defined
             </slot>
         </div>
       </div>
@@ -20,7 +20,7 @@
 
 export default {
   props: [
-      'title'
+    'title'
   ]
 }
 </script>
