@@ -2,9 +2,9 @@
 <template>
   <v-layout column>
     <v-flex xs1>
-      <panel title="Songs">
+      <panel title="Songs" class="centered-form">
        <div v-for="song in songs"
-       :key= "song.title">
+       :key= "song.id">
         {{song.title}}
         {{song.artist}}
         {{song.album}}
@@ -14,7 +14,7 @@
   </v-layout>
 </template>
 <script>
-import SongService from '@/services/SongsService'
+import SongsService from '@/services/SongsService'
 import Panel from '@/components/Panel'
 export default {
   components: {
@@ -26,9 +26,10 @@ export default {
     }
   },
   async mounted () {
-    //   do a request to the backend
-    this.songs = await SongService.index()
+    // do a request to the back end
+    this.songs = (await SongsService.index()).data
   }
+
 }
 </script>
 
@@ -41,5 +42,4 @@ export default {
   margin: 0 auto;
   width:700px;
 }
-
 </style>

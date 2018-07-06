@@ -2,7 +2,7 @@
 <template>
   <v-layout column>
     <v-flex xs1>
-      <div class="white elevation-2 centered-form">
+      <div class="white elevation-2">
         <v-toolbar flat dense class="light-green accent-4">
           <v-toolbar-title>{{title}}</v-toolbar-title>
         </v-toolbar>

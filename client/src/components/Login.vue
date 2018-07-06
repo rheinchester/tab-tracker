@@ -2,7 +2,7 @@
 <template>
   <v-layout column>
     <v-flex xs1>
-     <panel title="login">
+     <panel title="login" class="centered-form">
       <v-text-field
         label="Email"
         v-model="email"

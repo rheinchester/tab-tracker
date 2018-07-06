@@ -2,7 +2,7 @@
 <template>
   <v-layout column>
     <v-flex xs1>
-      <panel title="Register">
+      <panel title="Register" class="centered-form">
           <form name="tab-tracker-form" autocomplete="off">
             <v-text-field label="Email" v-model="email"
             ></v-text-field>
