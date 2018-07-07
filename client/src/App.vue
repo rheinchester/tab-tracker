@@ -44,4 +44,8 @@ export default {
  .btn__content{
    color: #fff
  }
+
+ .red-alert{
+   color: red
+ }
 </style>
