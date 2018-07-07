@@ -1,5 +1,6 @@
 const {Song} = require('../models')
-
+// NB: {force:true} clears the whole db. So in case server misbehaves try it. 
+// Figure out a better solution later
 
 module.exports = {
     async index(req, res){
