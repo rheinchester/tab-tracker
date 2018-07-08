@@ -29,13 +29,20 @@
           <div class="song-genre">
             {{song.genre}}
           </div>
-
-          <v-btn
-            dark
-            class="cyan"
-            @click="create">
-            Create Song
-          </v-btn>
+          <router-link
+            :to="{
+              name:'song',
+              params: {
+                songId: song.id
+                }
+              }"
+              class="a-text">
+            <v-btn
+              dark
+              class="cyan">
+              View
+            </v-btn>
+          </router-link>
          </v-flex>
 
          <v-flex xs6>
@@ -79,7 +86,7 @@ export default {
 .song{
   padding: 20px;
   height: 330px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .song-title{
   font-size: 30px
@@ -93,5 +100,28 @@ export default {
 .album-image{
   width: 100%;
   margin: 0 auto;
+}
+.a-text{
+  text-decoration: none;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: inherit;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  -webkit-transition: .3s cubic-bezier(.25,.8,.5,1);
+  transition: .9s cubic-bezier(.25,.8,.5,1);
+  white-space: nowrap;
+  width: inherit;
 }
 </style>
