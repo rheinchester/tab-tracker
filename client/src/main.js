@@ -13,7 +13,7 @@ Vue.config.productionTip = false
 
 Vue.use(Vuetify)
 
-sync(store, router)// this is giving errors
+sync(store, router)// this ensures that when ever the value fo store changes, the value for route also changes
 
 /* eslint-disable no-new */
 new Vue({

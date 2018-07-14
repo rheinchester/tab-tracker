@@ -3,6 +3,16 @@ const {Song} = require('../models')
 // Figure out a better solution later
 
 module.exports = {
+    async show (req, res){
+        try {
+            const songs = await Song.findById(req.params.songId)
+            res.send(songs)
+        } catch (err) {
+            res.status(500).send({
+                error: 'An error occured trying to fetch songs'
+            })
+        }
+    },
     async index(req, res){
         try {
             const songs = await Song.findAll({
@@ -15,7 +25,6 @@ module.exports = {
             })
         }
     },
-
     async post (req, res) {
         try {
             const song = await Song.create(req.body)
