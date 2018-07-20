@@ -5,7 +5,12 @@
 <script>
 
 export default {
-  
+  props: [
+      'youtubeId'
+  ],
+  components: {
+      Panel
+  }
 }
 </script>
 
