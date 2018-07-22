@@ -8,12 +8,17 @@ import Vuetify from 'vuetify'
 import {sync} from 'vuex-router-sync'
 import 'vuetify/dist/vuetify.min.css'
 import store from '@/store/store'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 
 Vue.config.productionTip = false
 
 Vue.use(Vuetify)
+Vue.use(VueYouTubeEmbed)
 
-sync(store, router)// this ensures that when ever the value fo store changes, the value for route also changes
+//  sync(store, router):
+//  ensures that whenever the value fo store changes,
+//  the value for route also changes.
+sync(store, router)
 
 /* eslint-disable no-new */
 new Vue({

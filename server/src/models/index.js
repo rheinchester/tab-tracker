@@ -7,10 +7,10 @@ const db = {}
 
 // initializing sequelize
 const sequelize = new Sequelize(
-    config.db.database,
-    config.db.user,
-    config.db.password,
-    config.db.options
+  config.db.database,
+  config.db.user,
+  config.db.password,
+  config.db.options
 )
 
 
@@ -28,7 +28,7 @@ const sequelize = new Sequelize(
 fs
   .readdirSync(__dirname)
   .filter((file) =>
-  file !== 'index.js'
+    file !== 'index.js'
   )
   .forEach((file) => {
     const model = sequelize.import(path.join(__dirname, file))
@@ -36,7 +36,7 @@ fs
   })
 
 // Binding sequelize and Sequelize to the db object
-db.sequelize = sequelize 
+db.sequelize = sequelize
 db.Sequelize = Sequelize
 module.exports = db
 // console.log(db)

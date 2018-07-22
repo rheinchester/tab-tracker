@@ -2,31 +2,30 @@
 <template>
   <div>
     <v-layout>
-        <v-flex xs6 >
-            <song-metadata :song="song"/>
+      <v-flex xs6>
+        <song-metadata :song="song"/>
+      </v-flex>
+
+      <v-flex xs6 ml-4>
+        <you-tube :youtubeId="song.youtubeId "/>
+      </v-flex>
+    </v-layout>
+
+    <v-layout mt-2>
+        <v-flex xs6>
+          <tab :song="song.tab" />
         </v-flex>
 
         <v-flex xs6 ml-4>
-              <you-tube :youtubeId="song.youtubeId "/>
+          <lyrics :song="song.lyrics" />
         </v-flex>
-
-        <!--<v-flex xs6 ml-4>
-            <panel title="Lyrics">
-                <textarea
-                  readonly
-                  v-model="song.lyrics"
-                  class="large-area"
-                  tabindex="0"
-                  aria-label="Tab"
-                  rows="5">
-                </textarea>
-          </panel>
-      </v-flex>-->
-    </v-layout>
+      </v-layout>
   </div>
 </template>
 
 <script>
+import Lyrics from './Lyrics'
+import Tab from './Tab'
 import SongMetadata from './SongMetadata'
 import YouTube from './YouTube'
 import SongsService from '@/services/SongsService'
@@ -44,14 +43,16 @@ export default {
   components: {
     Panel,
     SongMetadata,
-    YouTube
+    YouTube,
+    Lyrics,
+    Tab
   }
 }
 </script>
 
 <!-- Add "scoped " attribute to limit CSS to this component only -->
 <style scoped>
-.large-area{
+.large-area {
   width: 100%;
   font-family: monospace;
   border: none;

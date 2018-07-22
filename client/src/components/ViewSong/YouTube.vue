@@ -1,17 +1,20 @@
 <!--Template defines html template-->
 <template>
-    <panel title="YouTube Video">
-       {{youtubeId}}
-    </panel>
+  <panel title="YouTube Video">
+    <youtube :video-Id="youtubeId" :player-width="500" :player-height="200">
+    </youtube>
+  </panel>
 </template>
 <script>
 import Panel from '@/components/Panel'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 export default {
   props: [
     'youtubeId'
   ],
   components: {
-    Panel
+    Panel,
+    VueYouTubeEmbed
   }
 }
 </script>
