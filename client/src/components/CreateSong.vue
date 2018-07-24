@@ -96,10 +96,10 @@ export default {
   methods: {
     async create () {
       this.error = null
-      const FilledFields = Object
+      const filledFields = Object
         .keys(this.song)
         .every(key => !!this.song[key])
-      if (!FilledFields) {
+      if (!filledFields) {
         this.error = 'Please fill in all required fields'
         return
       }
