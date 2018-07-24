@@ -54,6 +54,7 @@ export default {
   },
   methods: {
     async save () {
+      console.log('save clicked!')
       this.error = null
       const filledFields = Object
         .keys(this.song)
@@ -66,8 +67,8 @@ export default {
       const songId = this.$store.state.route.params.songId
       try {
         await SongsService.put(this.song)
-        this.router.push({
-          name: 'songs',
+        this.$router.push({
+          name: 'song',
           params: {
             songId: songId
           }
