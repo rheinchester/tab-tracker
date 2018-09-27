@@ -1,11 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "A serverside node project",
   "main": "./src/app.js",
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "lint": "eslint **/*.js"
   },
   "keywords": [],
   "author": "Jacob Okoro <jaycobokoro@gmail.com>",
@@ -20,8 +20,17 @@
     "joi": "^13.4.0",
     "jsonwebtoken": "^8.2.2",
     "morgan": "^1.9.0",
-    "nodemon": "^1.17.5",
+    "nodemon": "*",
     "sequelize": "^4.37.10",
     "sqlite3": "^4.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rheinchester/tab-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rheinchester/tab-tracker/issues"
+  },
+  "homepage": "https://github.com/rheinchester/tab-tracker#readme"
 }
