@@ -17,12 +17,13 @@
     "cors": "^2.8.4",
     "eslint": "^4.19.1",
     "express": "^4.16.3",
-    "joi": "^13.4.0",
-    "jsonwebtoken": "^8.2.2",
-    "morgan": "^1.9.0",
-    "nodemon": "*",
-    "sequelize": "^4.37.10",
-    "sqlite3": "^4.0.0"
+    "joi": "^13.7.0",
+    "jsonwebtoken": "^8.3.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.4",
+    "sequelize": "^4.39.0",
+    "sqlite": "^3.0.0",
+    "sqlite3": "^3.1.13"
   },
   "devDependencies": {},
   "repository": {
