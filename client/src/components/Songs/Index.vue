@@ -3,7 +3,7 @@
   <v-layout column>
     <v-flex xs1>
      <song-search-panel />
-     <songs-panel />
+     <songs-panel class="mt-2"/>
     </v-flex>
   </v-layout>
 </template>

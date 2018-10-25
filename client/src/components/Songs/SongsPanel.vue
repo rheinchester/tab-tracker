@@ -51,22 +51,22 @@
   </panel>
 </template>
 <script>
-import SongsPanel from './SongsPanel'
 import SongsService from '@/services/SongsService'
+
 export default {
-  components: {
-    SongsPanel
-  },
   data () {
     return {
       songs: null
     }
   },
-  async mounted () {
-    // do a request to the back end
-    this.songs = (await SongsService.index()).data
+  watch: {
+    '$route.query.search': {
+      immidiate: true,
+      async handler (value) {
+        this.songs = await SongsService.index(value)
+      }
+    }
   }
-
 }
 </script>
 
