@@ -30,8 +30,8 @@ module.exports = {
           }
         })
       } else {
-         const songs = await Song.findAll({
-        limit: 15
+        songs = await Song.findAll({
+          limit: 15
       })
     }
     res.send(songs)

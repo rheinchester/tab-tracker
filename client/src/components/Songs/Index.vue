@@ -8,9 +8,10 @@
   </v-layout>
 </template>
 <script>
-import SongsPanel from './SongsPanel'
+import SongsPanel from './SongsPanel' // eslint-disable-line no-use-before-define
 import SongSearchPanel from './SongSearchPanel'
 import SongsService from '@/services/SongsService'
+
 export default {
   components: {
     SongsPanel,
