@@ -14,7 +14,6 @@
 import SongMetadata from './SongMetadata'
 import YouTube from './YouTube'
 import SongsService from '@/services/SongsService'
-import Panel from '@/components/Panel'
 export default {
   data () {
     return {
@@ -26,7 +25,6 @@ export default {
     this.song = (await SongsService.show(songId)).data
   },
   components: {
-    Panel,
     SongMetadata,
     YouTube
   }

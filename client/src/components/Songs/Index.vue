@@ -2,7 +2,7 @@
 <template>
   <v-layout column>
     <v-flex xs1>
-     <songs-search-panel />
+     <song-search-panel />
      <songs-panel />
     </v-flex>
   </v-layout>
@@ -11,10 +11,8 @@
 import SongsPanel from './SongsPanel'
 import SongSearchPanel from './SongSearchPanel'
 import SongsService from '@/services/SongsService'
-import Panel from '@/components/Panel'
 export default {
   components: {
-    Panel,
     SongsPanel,
     SongSearchPanel
   },

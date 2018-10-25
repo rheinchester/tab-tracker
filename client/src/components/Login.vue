@@ -50,7 +50,7 @@ export default {
         this.error = error.response.data.error
       }
     }
-  },
+  }
 }
 </script>
 
