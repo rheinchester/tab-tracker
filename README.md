@@ -4,7 +4,7 @@ A vue-js/ express js application for keeping guitar tabs
 # Tech involved
 - Client: vue.js
 - Server: Node.js with the express framework
-- Database: MysQl (sequelize
+- Database: MySql (sequelize)
 - Theme: vuetify
 
 # Inspired by 
